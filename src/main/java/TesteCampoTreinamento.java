@@ -131,8 +131,10 @@ public class TesteCampoTreinamento {
 			driver.findElement(By.linkText("Voltar")).click();
 			Assert.assertEquals("Voltou!", driver.findElement(By.id("resultado")).getText());
 			driver.quit();
+		
 	}
 
+	
 	@Test
 	public void deveInteragirComTextosNaTela() {
 			WebDriver driver = new ChromeDriver();
@@ -146,6 +148,17 @@ public class TesteCampoTreinamento {
 			driver.quit();
 	}
 
+	
+	@Test
+	public void deveInteragirComGoogleComXPath() {
+		//TesteXPATH
+			WebDriver driver = new ChromeDriver();
+			driver.get("https://www.google.com.br/");
+			driver.findElement(By.xpath("//input[@id='lst-ib']")).sendKeys("Teste de escrita");
+			driver.findElement(By.xpath("//input[@value='Pesquisa Google']")).click();
+			Assert.assertEquals("Typing Test Portuguese - 10FastFingers.com", driver.findElement(By.xpath("//a[contains(text(),'Typing Test Portuguese - 10FastFingers.com')]")).getText());
+	}
+	
 }
 
 

@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class TesteCadastroOK {
-	//Teste de committt
+	
 	@Test
 	public void cadastroComSucesso() {
 	
